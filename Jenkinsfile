@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'java -cp target/api-0.0.1-SNAPSHOT.jar com.rest.api'
+                bat 'java -jar target/api-0.0.1-SNAPSHOT.jar'
             }
         }
     }
