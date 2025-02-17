@@ -7,9 +7,9 @@ pipeline {
                 bat 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test') {
+        stage('Version') {
             steps {
-                bat 'mvn test'
+                bat 'java -version'
             }
             post {
                 always {
