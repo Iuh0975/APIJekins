@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat '.\\jenkins\\scripts\\deliver.bat'
+                bat 'java -jar target/my-app-1.0-SNAPSHOT.jar'
             }
         }
     }
