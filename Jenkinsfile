@@ -11,11 +11,6 @@ pipeline {
             steps {
                 bat 'java -version'
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
         }
         stage('Deliver') {
             steps {
