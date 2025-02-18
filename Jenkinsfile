@@ -13,12 +13,10 @@ pipeline {
                 bat 'java -jar target/api-0.0.1-SNAPSHOT.jar'
             }
         }
-
-        post{
-            success{
-                echo 'Deployment pipeline completed successfully!'
-            }
+    }
+    post{
+        success{
+            echo 'Deployment pipeline completed successfully!'
         }
-
     }
 }
