@@ -9,7 +9,7 @@ pipeline {
         }
         stage('check maven version') {
             steps {
-                bat 'mvn -v'
+                bat 'mvn -version'
             }
         }
 //         stage('Build') {
