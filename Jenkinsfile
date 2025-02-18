@@ -7,6 +7,11 @@ pipeline {
                 bat 'java -version'
             }
         }
+        stage('check java directory') {
+            steps {
+                bat 'echo $JAVA_HOME'
+            }
+        }
         stage('check maven version') {
             steps {
                 bat 'mvn -version'
