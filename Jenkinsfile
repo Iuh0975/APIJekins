@@ -2,21 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('check version') {
             steps {
-                bat 'mvn clean package'
+                bat 'java -version'
+                bat 'mvn -v'
             }
         }
+//         stage('Build') {
+//             steps {
+//                 bat 'mvn clean package'
+//             }
+//         }
+//
+//         stage('Deploy') {
+//             steps {
+//                 bat 'java -jar target/api-0.0.1-SNAPSHOT.jar'
+//             }
+//         }
 
-        stage('Deploy') {
-            steps {
-                bat 'java -jar target/api-0.0.1-SNAPSHOT.jar'
-            }
-        }
-    }
-    post{
-        success{
-            echo 'Deployment pipeline completed successfully!'
-        }
     }
 }
